@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2 - Aedem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <!-- Если нет картинки logo.png, будет текст -->
+                <img src="logo.png" alt="Логотип" onerror="this.style.display='none'">
+                <span class="logo-text">ЛОГО</span>
+            </div>
+            <div class="site-title">
+                <h1>Мой сайт КубГУ</h1>
+            </div>
+        </div>
+        
+        <!-- МЕНЮ -->
+        <nav>
+            <a href="#links">Ссылки</a>
+            <a href="#table-section">Таблица</a>
+            <a href="#form-section">Форма</a>
+        </nav>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <div class="container">
+
+        <!-- СПИСОК ССЫЛОК (из Задания 1) -->
+        <section id="links">
+            <h2>Список гиперссылок</h2>
+            <ul>
+                <li><a href="http://kubsu.ru/">Абсолютная ссылка (http)</a></li>
+                <li><a href="https://kubsu.ru/">Абсолютная ссылка (https)</a></li>
+                <li><a href="https://kubsu.ru/"><img src="https://via.placeholder.com/100" alt="Картинка-ссылка"></a></li>
+                <li><a href="/ru/struct/university">Сокращённая на внутреннюю</a></li>
+                <li><a href="/">Сокращённая на главную</a></li>
+                <li><a href="#top">На фрагмент страницы</a></li>
+                <li><a href="page.html?a=1&b=2&c=3">С тремя параметрами</a></li>
+                <li><a href="page.html?id=5">С параметром id</a></li>
+                <li><a href="page.html">Относительная в текущем каталоге</a></li>
+                <li><a href="about/page.html">Относительная в about</a></li>
+                <li><a href="../page.html">На уровень выше</a></li>
+                <li><a href="../../page.html">Двумя уровнями выше</a></li>
+                <li><p>Контекстная <a href="https://kubsu.ru/">ссылка</a> в тексте</p></li>
+                <li><a href="https://kubsu.ru/ru/struct/university#content">На фрагмент стороннего сайта</a></li>
+                <li>
+                    <img src="map.png" alt="Карта" usemap="#map1" width="400" height="200">
+                    <map name="map1">
+                        <area shape="rect" coords="0,0,200,200" href="https://kubsu.ru/" alt="Прямоугольник">
+                        <area shape="circle" coords="300,100,80" href="https://kubsu.ru/ru/struct/university" alt="Круг">
+                    </map>
+                </li>
+                <li><a href="">Пустая ссылка</a></li>
+                <li><a>Ссылка без href</a></li>
+                <li><a href="https://kubsu.ru/" rel="nofollow">Ссылка nofollow</a></li>
+                <li><a href="https://kubsu.ru/" rel="nofollow noopener">Ссылка noindex</a></li>
+                <li>
+                    <ol>
+                        <li><a href="https://kubsu.ru/" title="Главная">Ссылка 1</a></li>
+                        <li><a href="https://kubsu.ru/ru/struct/university" title="О университете">Ссылка 2</a></li>
+                        <li><a href="https://kubsu.ru/ru/struct/faculties" title="Факультеты">Ссылка 3</a></li>
+                    </ol>
+                </li>
+                <li><a href="ftp://ftp.example.com/file.txt">FTP ссылка</a></li>
+            </ul>
+        </section>
+
+        <!-- ТАБЛИЦА (новое из Задания 2) -->
+        <section id="table-section">
+            <h2>Таблица</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Название предмета</th>
+                        <th>Описание</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td colspan="2">Объединённая ячейка (HTML + CSS)</td>
+                        <td>Изучено</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Веб-разработка</td>
+                        <td>Создание сайтов</td>
+                        <td>Активно</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>HTML5</td>
+                        <td>Разметка страниц</td>
+                        <td>Готово</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>CSS3</td>
+                        <td>Стилизация</td>
+                        <td>В процессе</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>JavaScript</td>
+                        <td>Программирование</td>
+                        <td>Планируется</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>GitHub</td>
+                        <td>Хостинг проектов</td>
+                        <td>Используется</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ФОРМА (из Задания 1) -->
+        <section id="form-section">
+            <h2>Форма</h2>
+            <form action="#" method="post">
+                <label>ФИО:</label><br>
+                <input type="text" name="fio" placeholder="Иванов Иван Иванович"><br><br>
+
+                <label>Телефон:</label><br>
+                <input type="tel" name="phone" placeholder="+7 (999) 123-45-67"><br><br>
+
+                <label>E-mail:</label><br>
+                <input type="email" name="email" placeholder="example@mail.ru"><br><br>
+
+                <label>Дата рождения:</label><br>
+                <input type="date" name="birthdate"><br><br>
+
+                <label>Пол:</label><br>
+                <input type="radio" name="gender" value="male"> Мужской<br>
+                <input type="radio" name="gender" value="female"> Женский<br><br>
+
+                <label>Любимый язык программирования:</label><br>
+                <input type="checkbox" name="lang" value="Pascal"> Pascal<br>
+                <input type="checkbox" name="lang" value="C"> C<br>
+                <input type="checkbox" name="lang" value="C++"> C++<br>
+                <input type="checkbox" name="lang" value="JavaScript"> JavaScript<br>
+                <input type="checkbox" name="lang" value="PHP"> PHP<br>
+                <input type="checkbox" name="lang" value="Python"> Python<br>
+                <input type="checkbox" name="lang" value="Java"> Java<br>
+                <input type="checkbox" name="lang" value="Haskell"> Haskell<br>
+                <input type="checkbox" name="lang" value="Clojure"> Clojure<br>
+                <input type="checkbox" name="lang" value="Prolog"> Prolog<br>
+                <input type="checkbox" name="lang" value="Scala"> Scala<br><br>
+
+                <label>Биография:</label><br>
+                <textarea name="bio" rows="5" cols="40" placeholder="Расскажите о себе..."></textarea><br><br>
+
+                <input type="checkbox" name="contract"> С контрактом ознакомлен(а)<br><br>
+
+                <button type="submit">Сохранить</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- ПОДВАЛ -->
+    <footer>
+        <p>(c) Aedem 2024. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
