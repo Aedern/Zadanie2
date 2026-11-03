@@ -144,18 +144,21 @@
                 <input type="radio" name="gender" value="male"> Мужской<br>
                 <input type="radio" name="gender" value="female"> Женский<br><br>
 
-                <label>Любимый язык программирования:</label><br>
-                <input type="checkbox" name="lang" value="Pascal"> Pascal<br>
-                <input type="checkbox" name="lang" value="C"> C<br>
-                <input type="checkbox" name="lang" value="C++"> C++<br>
-                <input type="checkbox" name="lang" value="JavaScript"> JavaScript<br>
-                <input type="checkbox" name="lang" value="PHP"> PHP<br>
-                <input type="checkbox" name="lang" value="Python"> Python<br>
-                <input type="checkbox" name="lang" value="Java"> Java<br>
-                <input type="checkbox" name="lang" value="Haskell"> Haskell<br>
-                <input type="checkbox" name="lang" value="Clojure"> Clojure<br>
-                <input type="checkbox" name="lang" value="Prolog"> Prolog<br>
-                <input type="checkbox" name="lang" value="Scala"> Scala<br><br>
+                <label for="lang-select">Любимый язык программирования (зажми Ctrl и кликай, чтобы выбрать несколько):</label><br>
+
+<select name="lang" id="lang-select" multiple size="6" class="lang-select">
+    <option value="Pascal">Pascal</option>
+    <option value="C">C</option>
+    <option value="C++">C++</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="PHP">PHP</option>
+    <option value="Python">Python</option>
+    <option value="Java">Java</option>
+    <option value="Haskell">Haskell</option>
+    <option value="Clojure">Clojure</option>
+    <option value="Prolog">Prolog</option>
+    <option value="Scala">Scala</option>
+</select><br><br>
 
                 <label>Биография:</label><br>
                 <textarea name="bio" rows="5" cols="40" placeholder="Расскажите о себе..."></textarea><br><br>
