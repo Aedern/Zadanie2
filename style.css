@@ -80,11 +80,7 @@ header {
     flex-direction: row-reverse;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    order: 2;
-}
+
 
 .logo-img {
     display: none;
