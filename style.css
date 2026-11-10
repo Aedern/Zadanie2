@@ -1,4 +1,4 @@
-/* ========== ОБЩИЕ СТИЛИ ========== */
+/* ========== ФУНДАМЕНТ ========== */
 * {
     margin: 0;
     padding: 0;
@@ -24,34 +24,7 @@ main {
     flex: 1;
 }
 
-/* Контейнер */
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    width: 100%;
-}
-
-/* Заголовки секций */
-section h2 {
-    color: #2c3e50;
-    margin: 30px 0 20px 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #3498db;
-}
-
-/* Списки */
-ul, ol {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* Ссылки */
+/* ========== ССЫЛКИ И ЗАГОЛОВКИ ========== */
 a {
     color: #3498db;
     text-decoration: none;
@@ -60,6 +33,22 @@ a {
 a:hover {
     text-decoration: underline;
     color: #2980b9;
+}
+
+section h2 {
+    color: #2c3e50;
+    margin: 30px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
 }
 
 /* ========== ШАПКА ========== */
@@ -75,38 +64,32 @@ header {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    align-items: center;
 }
 
-
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
 .logo-img {
-    display: block;  /* ← Показываем картинку */
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin-right: 10px;
+}
 
-}
-.logo {
-    display: flex;
-    align-items: center;
-    order: 2;
-}
 .site-title h1 {
     font-size: 24px;
     color: white;
     margin: 0;
-    order: 2;
 }
 
-/* Меню */
+/* ========== МЕНЮ ========== */
 .nav {
     display: flex;
     gap: 15px;
-    order: 1;
 }
 
 .nav a {
@@ -121,6 +104,15 @@ header {
 .nav a:hover {
     background-color: #2980b9;
     text-decoration: none;
+}
+
+/* ========== КОНТЕЙНЕР ========== */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
 }
 
 /* ========== ТАБЛИЦА ========== */
@@ -156,6 +148,11 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
+td[colspan] {
+    font-weight: bold;
+    background-color: #e8f4f8;
+}
+
 /* ========== ФОРМА ========== */
 form {
     background-color: #f9f9f9;
@@ -175,35 +172,15 @@ input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="date"],
-textarea {
+textarea,
+.lang-select {
     width: 100%;
     max-width: 400px;
     padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-/* Множественный выбор языков */
-.multi-select {
-    width: 100%;
-    max-width: 400px;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    background-color: white;
-    margin-bottom: 15px;
-}
-
-.multi-select option {
-    padding: 5px;
-}
-
-.multi-select option:checked {
-    background-color: #3498db;
-    color: white;
 }
 
 input[type="radio"],
@@ -214,6 +191,15 @@ input[type="checkbox"] {
 
 textarea {
     resize: vertical;
+}
+
+.lang-select {
+    background-color: white;
+}
+
+.lang-select option:checked {
+    background-color: #3498db;
+    color: white;
 }
 
 button[type="submit"] {
@@ -244,7 +230,6 @@ footer {
 footer p {
     margin: 0;
     font-size: 14px;
-    text-align: left;
 }
 
 /* ========== АДАПТИВНОСТЬ ========== */
@@ -254,14 +239,13 @@ footer p {
         gap: 15px;
     }
     
-    .logo, .site-title {
-        order: 1;
+    .header-left {
+        justify-content: center;
     }
     
     .nav {
-        order: 2;
-        flex-wrap: wrap;
         justify-content: center;
+        flex-wrap: wrap;
     }
     
     .container {
@@ -273,7 +257,7 @@ footer p {
     input[type="email"],
     input[type="date"],
     textarea,
-    .multi-select {
+    .lang-select {
         max-width: 100%;
     }
     
